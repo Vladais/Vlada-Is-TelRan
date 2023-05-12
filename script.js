@@ -1,40 +1,21 @@
- 
-// const number = prompt("Введите число")
-//  console.log(number * 0.1)
-// 
-// /*
-//  const number1 = number * 0.1
-//  console.log(number1)
-//  */
+function start_game() {
+    object.classList.toggle("start");
+    document.title = 'Score: 0';
+}
 
-//////////////////////////////////////////
-// const number1 = prompt("Введите число")
-// const number2 = prompt("Введите число")
-// if(number1 < number2) {
-//     console.log(number1)
-// }
-// else if(number2 < number1) {
-//     console.log(number2)
-// }
+function miss(event) {
+    if (event.target.id == "area") {
+        console.log("miss")
+    }
+}
 
-//////////////////////////////////////////
-// const number = prompt("Введите число")
-// if(number > 100) {
-//     console.log("Число болше 100")
-// }  
-// else if(number == 100) {
-//     console.log("Число равно 100")
-// }
-// else {
-//     console.log("Число меньше 100")
-// } 
+function hit() {
+   score++;
+   document.title = `Score: ${score}`;
+}
 
-////////////////////////////////////////////
-// const userName = prompt("Как вас зовут?")
-// const userAge = prompt("Сколько Вам лет?")
-// if(userAge >= 18) {
-//     console.log("Hello, " + userName)
-// }  
-// else {
-//     console.log("Hi, " + userName)
-// }
+let score = 0; 
+let object = document.querySelector('#object');
+
+
+
